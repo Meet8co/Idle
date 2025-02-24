@@ -185,3 +185,55 @@ class SpaceMiningEmpire {
 }
 
 const game = new SpaceMiningEmpire();
+// Inside the createUpgradeButtons function
+for (const [type, upgrade] of Object.entries(this.upgrades)) {
+    const button = document.createElement('button');
+    let icon = '';
+    switch (type) {
+        case 'autoMiner':
+            icon = '<i class="fa-solid fa-robot"></i>';
+            break;
+        case 'solarPanel':
+            icon = '<i class="fa-solid fa-solar-panel"></i>';
+            break;
+        case 'drill':
+            icon = '<i class="fa-solid fa-pickaxe"></i>';
+            break;
+        case 'energyStorage':
+            icon = '<i class="fa-solid fa-battery-full"></i>';
+            break;
+        case 'mineralRefinery':
+            icon = '<i class="fa-solid fa-gears"></i>';
+            break;
+        case 'fusionReactor':
+            icon = '<i class="fa-solid fa-atom"></i>';
+            break;
+    }
+    button.innerHTML = `${icon} Buy ${type} (Cost: ${upgrade.cost} minerals)`;
+    button.addEventListener('click', () => this.buyUpgrade(type));
+    this.upgradesContainer.appendChild(button);
+}
+
+// Inside the createTechTree function
+for (const [tech, details] of Object.entries(this.techTree)) {
+    const button = document.createElement('button');
+    let icon = '';
+    switch (tech) {
+        case 'improvedMining':
+            icon = '<i class="fa-solid fa-pickaxe"></i>';
+            break;
+        case 'efficientEnergy':
+            icon = '<i class="fa-solid fa-bolt"></i>';
+            break;
+        case 'advancedDrilling':
+            icon = '<i class="fa-solid fa-drill"></i>';
+            break;
+        case 'darkMatterExtraction':
+            icon = '<i class="fa-solid fa-star"></i>';
+            break;
+    }
+    button.innerHTML = `${icon} ${tech} (Cost: ${details.cost} Dark Matter)`;
+    button.disabled = details.unlocked;
+    button.addEventListener('click', () => this.unlockTech(tech));
+    this.techTreeContainer.appendChild(button);
+}
