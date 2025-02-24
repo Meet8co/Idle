@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Mining Empire</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="game-container">
         <h1>Space Mining Empire</h1>
         <div class="resources">
-            <p>Minerals: <span id="minerals">0</span></p>
-            <p>Energy: <span id="energy">0</span></p>
-            <p>Dark Matter: <span id="darkMatter">0</span></p>
+            <p><i class="fa-solid fa-gem"></i> Minerals: <span id="minerals">0</span></p>
+            <p><i class="fa-solid fa-bolt"></i> Energy: <span id="energy">0</span></p>
+            <p><i class="fa-solid fa-star"></i> Dark Matter: <span id="darkMatter">0</span></p>
         </div>
         <div class="main-area">
             <div class="mining-area">
-                <button id="mineButton">Mine Minerals</button>
+                <button id="mineButton"><i class="fa-solid fa-pickaxe"></i> Mine Minerals</button>
                 <div id="upgrades"></div>
             </div>
             <div class="rebirth-area">
-                <h2>Rebirth</h2>
-                <p>Dark Matter: <span id="darkMatterGain">0</span></p>
-                <button id="rebirthButton">Rebirth</button>
+                <h2><i class="fa-solid fa-rocket"></i> Rebirth</h2>
+                <p><i class="fa-solid fa-star"></i> Dark Matter Gain: <span id="darkMatterGain">0</span></p>
+                <button id="rebirthButton"><i class="fa-solid fa-rocket"></i> Rebirth</button>
                 <div id="techTree"></div>
             </div>
         </div>
         <div class="save-load">
-            <button id="saveButton">Save Game</button>
-            <button id="loadButton">Load Game</button>
+            <button id="saveButton"><i class="fa-solid fa-floppy-disk"></i> Save Game</button>
+            <button id="loadButton"><i class="fa-solid fa-file-arrow-down"></i> Load Game</button>
+            <button id="howToPlayButton"><i class="fa-solid fa-book"></i> How to Play</button>
         </div>
     </div>
     <script src="game.js"></script>
+    <script>
+        document.getElementById('howToPlayButton').addEventListener('click', () => {
+            window.location.href = 'how-to-play.html';
+        });
+    </script>
 </body>
 </html>
