@@ -16,6 +16,16 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 18px; /* Larger font size */
+}
+
+.how-to-play-container {
+    font-size: 18px;
+    line-height: 1.5; /* Improved line height */
+}
+
+.how-to-play-container ol {
+    padding-left: 20px; /* Indent for ordered list */
 }
 
 .resources {
@@ -36,8 +46,8 @@ body {
 
 button {
     margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 25px; /* Increased padding for larger text */
+    font-size: 18px; /* Larger font size */
     cursor: pointer;
     background-color: #4CAF50; /* Green buttons */
     color: #fff;
