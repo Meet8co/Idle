@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Mining Colony</title>
+    <title>Space Mining Empire</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>Space Mining Colony</h1>
-        <p>Minerals: <span id="minerals">0</span></p>
-        <p>Energy: <span id="energy">0</span></p>
-        <button id="mineButton">Mine Minerals</button>
-        <div id="upgrades"></div>
-        <button id="saveButton">Save Game</button>
-        <button id="loadButton">Load Game</button>
+        <h1>Space Mining Empire</h1>
+        <div class="resources">
+            <p>Minerals: <span id="minerals">0</span></p>
+            <p>Energy: <span id="energy">0</span></p>
+            <p>Dark Matter: <span id="darkMatter">0</span></p>
+        </div>
+        <div class="main-area">
+            <div class="mining-area">
+                <button id="mineButton">Mine Minerals</button>
+                <div id="upgrades"></div>
+            </div>
+            <div class="rebirth-area">
+                <h2>Rebirth</h2>
+                <p>Dark Matter: <span id="darkMatterGain">0</span></p>
+                <button id="rebirthButton">Rebirth</button>
+                <div id="techTree"></div>
+            </div>
+        </div>
+        <div class="save-load">
+            <button id="saveButton">Save Game</button>
+            <button id="loadButton">Load Game</button>
+        </div>
     </div>
     <script src="game.js"></script>
 </body>
